@@ -4,12 +4,13 @@ const TodoItem = ({ checkTodo, todo }) => {
   const [completedTodo, setCompletedTodo] = useState(todo.completed);
 
   const completedStyle = {
-    textDecoration: "line-through"
+    textDecoration: "line-through",
+    opacity: 0.5
   };
 
   return (
-    <div className="todo-item">
-      <span style={completedTodo ? completedStyle : null}>{todo.title}</span>
+    <div className="todo-item" style={completedTodo ? completedStyle : null}>
+      <span>{todo.title}</span>
       <label className="todo-label">
         <input
           className="todo-check"
