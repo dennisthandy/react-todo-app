@@ -10,13 +10,17 @@ const TodoItem = ({ checkTodo, todo }) => {
   return (
     <div className="todo-item">
       <span style={completedTodo ? completedStyle : null}>{todo.title}</span>
-      <input
-        type="checkbox"
-        checked={completedTodo}
-        onChange={(e) => {
-          setCompletedTodo(checkTodo(todo));
-        }}
-      />
+      <label className="todo-label">
+        <input
+          className="todo-check"
+          type="checkbox"
+          checked={completedTodo}
+          onChange={(e) => {
+            setCompletedTodo(checkTodo(todo));
+          }}
+        />
+        <span className="checkmark"></span>
+      </label>
     </div>
   );
 };
