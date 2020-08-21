@@ -36,6 +36,7 @@ h1 {
 
 .todo-input:focus {
   border: hotpink 1px solid;
+  outline: none;
 }
 
 .button-clear {
@@ -43,13 +44,34 @@ h1 {
   padding: 0.5rem;
   margin-top: 0.5rem;
   border: none;
-  background-color: plum;
+  background-color: maroon;
   border-radius: 0.25rem;
   cursor: pointer;
+  color: white;
 }
 
-.button-clear:hover {
-  background-color: pink;
+.button-filter {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: none;
+  background-color: gray;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: white;
+}
+
+.button-filter:hover {
+  background-color: silver;
+  outline: none;
+}
+
+.button-filter:active {
+  outline: none;
+}
+
+.active {
+  background-color: green;
 }
 
 .todo-item-container {
@@ -100,4 +122,8 @@ h1 {
 
 .todo-label .todo-check:checked ~ .checkmark {
   background-color: hotpink;
+}
+
+footer {
+  margin: 1rem 0 3rem 0;
 }
